@@ -1,6 +1,6 @@
 const sql = require('mssql/msnodesqlv8');
 const dbConfig = require('./config');
-// import msnodesqlv8 from 'msnodesqlv8';
+//const msnodesqlv8 = require('msnodesqlv8');
 
 const poolPromise = new sql.ConnectionPool(dbConfig)
   .connect()

@@ -1,7 +1,8 @@
-import libxslt, { libxmljs } from 'libxslt';
-import fs from 'fs';
+const libxslt = require('libxslt');
+const libxmljs = libxslt.libxmljs;
+const fs = require('fs');
 
-module.export = function transformXmlToHtml(xmlFile, xsltFile, outputHtmlFile) {
+module.exports = function transformXmlToHtml(xmlFile, xsltFile, outputHtmlFile) {
   // Read the XML and XSLT files
   const xmlString = fs.readFileSync(xmlFile, 'utf8');
   const xsltString = fs.readFileSync(xsltFile, 'utf8');
